@@ -5,7 +5,7 @@
     android:viewportHeight="984"
     android:viewportWidth="1920">
 
-    <path android:fillColor="#224"
+    <path android:fillColor="@color/background_color"
         android:pathData="M0,0
                         l0,984
                         l1920,0
@@ -14,7 +14,7 @@
     <group android:name="blue_triangle">
 
         <path android:fillColor="#59a"
-            android:strokeColor="#224"
+            android:strokeColor="@color/background_color"
             android:strokeWidth="3"
             android:pathData="M0,-100
                         l0,300
@@ -26,7 +26,7 @@
     <group android:name="green_triangle">
 
         <path android:fillColor="#292"
-            android:strokeColor="#224"
+            android:strokeColor="@color/background_color"
             android:strokeWidth="3"
             android:pathData="M0,222
                         l0,300
@@ -38,7 +38,7 @@
     <group android:name="orange_triangle">
 
         <path android:fillColor="#f51"
-            android:strokeColor="#224"
+            android:strokeColor="@color/background_color"
             android:strokeWidth="3"
             android:pathData="M0,625
                         l0,360
@@ -50,7 +50,7 @@
     <group android:name="yellow_triangle">
 
         <path android:fillColor="#ec1"
-            android:strokeColor="#224"
+            android:strokeColor="@color/background_color"
             android:strokeWidth="3"
             android:pathData="M0,400
                         l0,240
@@ -62,7 +62,7 @@
     <group android:name="red_triangle">
 
         <path android:fillColor="#d44"
-            android:strokeColor="#224"
+            android:strokeColor="@color/background_color"
             android:strokeWidth="3"
             android:pathData="M0,800
                         l0,300

@@ -10,8 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40dp"
-        android:textColor="#224"
-        android:text="QUESTIONS" />
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_header"
+        android:textColor="@color/background_color"
+        android:text="@string/questions_caps" />
 
 </person.mpatterson.animationtalk.widget.BaseLayout>
