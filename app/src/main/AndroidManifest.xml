@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
-            android:name=".BaseActivity"
+            android:name=".ui.IntroActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

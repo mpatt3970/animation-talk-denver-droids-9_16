@@ -12,22 +12,37 @@
  * the License.
  */
 
-package person.mpatterson.animationtalk;
+package person.mpatterson.animationtalk.helper;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-/*
- * MainActivity class that loads MainFragment
- */
-public class BaseActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
+import person.mpatterson.animationtalk.R;
+
+public abstract class BaseActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+        setContentView(getLayoutResourceId());
     }
+
+    protected abstract int getLayoutResourceId();
+
+    // TODO
+//    protected abstract List<Phase> getPhases();
+//
+//    protected abstract Class getNextActivityClass();
+//
+//    protected abstract Transition getTransition();
+//
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//    }
+//
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        return super.onKeyDown(keyCode, event);
+//    }
 }
