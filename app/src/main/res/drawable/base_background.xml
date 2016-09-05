@@ -11,44 +11,64 @@
                         l1920,0
                         l0,-984"/>
 
-    <path android:fillColor="#59a"
-        android:strokeColor="#224"
-        android:strokeWidth="3"
-        android:pathData="M0,-100
+    <group android:name="blue_triangle">
+
+        <path android:fillColor="#59a"
+            android:strokeColor="#224"
+            android:strokeWidth="3"
+            android:pathData="M0,-100
                         l0,300
                         l300,-225
                         l-300,-400" />
 
-    <path android:fillColor="#292"
-        android:strokeColor="#224"
-        android:strokeWidth="3"
-        android:pathData="M0,222
+    </group>
+
+    <group android:name="green_triangle">
+
+        <path android:fillColor="#292"
+            android:strokeColor="#224"
+            android:strokeWidth="3"
+            android:pathData="M0,222
                         l0,300
                         l300,-225
                         l-300,-400" />
 
-    <path android:fillColor="#f51"
-        android:strokeColor="#224"
-        android:strokeWidth="3"
-        android:pathData="M0,625
+    </group>
+
+    <group android:name="orange_triangle">
+
+        <path android:fillColor="#f51"
+            android:strokeColor="#224"
+            android:strokeWidth="3"
+            android:pathData="M0,625
                         l0,360
                         l360,-270
                         l-360,-480" />
 
-    <path android:fillColor="#ec1"
-        android:strokeColor="#224"
-        android:strokeWidth="3"
-        android:pathData="M0,400
+    </group>
+
+    <group android:name="yellow_triangle">
+
+        <path android:fillColor="#ec1"
+            android:strokeColor="#224"
+            android:strokeWidth="3"
+            android:pathData="M0,400
                         l0,240
                         l240,-180
                         l-240,-320" />
 
-    <path android:fillColor="#d44"
-        android:strokeColor="#224"
-        android:strokeWidth="3"
-        android:pathData="M0,800
+    </group>
+
+    <group android:name="red_triangle">
+
+        <path android:fillColor="#d44"
+            android:strokeColor="#224"
+            android:strokeWidth="3"
+            android:pathData="M0,800
                         l0,300
                         l300,-225
                         l-300,-400" />
+
+    </group>
 
 </vector>

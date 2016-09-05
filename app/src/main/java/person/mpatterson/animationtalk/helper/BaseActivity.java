@@ -36,20 +36,17 @@ public abstract class BaseActivity extends Activity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             Class clazz = getNextActivityClass();
-            if (clazz == null) {
-                // do nothing
+            if (clazz != null) {
+                Intent intent = new Intent(this, clazz);
+                startActivity(intent);
                 return true;
             }
-            Intent intent = new Intent(this, clazz);
-            startActivity(intent);
-            return true;
         }
         return super.onKeyDown(keyCode, event);
     }
 
     // TODO
 //    protected abstract List<Phase> getPhases();
-//
 //
 //    protected abstract Transition getTransition();
 //
