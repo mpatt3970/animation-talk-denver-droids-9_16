@@ -15,9 +15,10 @@
 package person.mpatterson.animationtalk.helper;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-
-import person.mpatterson.animationtalk.R;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 public abstract class BaseActivity extends Activity {
 
@@ -29,10 +30,26 @@ public abstract class BaseActivity extends Activity {
 
     protected abstract int getLayoutResourceId();
 
+    protected abstract Class getNextActivityClass();
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            Class clazz = getNextActivityClass();
+            if (clazz == null) {
+                // do nothing
+                return true;
+            }
+            Intent intent = new Intent(this, clazz);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     // TODO
 //    protected abstract List<Phase> getPhases();
 //
-//    protected abstract Class getNextActivityClass();
 //
 //    protected abstract Transition getTransition();
 //

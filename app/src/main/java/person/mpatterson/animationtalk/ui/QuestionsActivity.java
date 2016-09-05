@@ -6,15 +6,14 @@ import person.mpatterson.animationtalk.helper.BaseActivity;
 /**
  * Created by michael on 9/5/16.
  */
-public class IntroActivity extends BaseActivity {
-
+public class QuestionsActivity extends BaseActivity {
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_intro;
+        return R.layout.activity_questions;
     }
 
     @Override
     protected Class getNextActivityClass() {
-        return QuestionsActivity.class;
+        return null;
     }
 }
