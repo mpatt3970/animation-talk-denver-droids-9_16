@@ -1,16 +1,12 @@
 package person.mpatterson.animationtalk.widget;
 
-import android.animation.Animator;
-import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Animatable2;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import person.mpatterson.animationtalk.R;
 
@@ -39,19 +35,10 @@ public class BaseLayout extends FrameLayout {
         setBackground(mBackground);
     }
 
-    public void startAnimation() {
-        if (mBackground instanceof Animatable) {
-            ((Animatable) mBackground).start();
-            getHandler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    TextView v = (TextView) findViewById(R.id.questions);
-                    Animator anim = ObjectAnimator.ofObject(v, "textColor", new ArgbEvaluator(),
-                            v.getCurrentTextColor(), ContextCompat.getColor(getContext(), android.R.color.white));
-                    anim.setDuration(3000);
-                    anim.start();
-                }
-            }, 3000);
+    public Animatable2 getAnimatable() {
+        if (mBackground instanceof Animatable2) {
+            return (Animatable2) mBackground;
         }
+        return null;
     }
 }

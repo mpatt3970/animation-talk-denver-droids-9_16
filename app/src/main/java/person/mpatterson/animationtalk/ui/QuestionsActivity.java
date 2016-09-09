@@ -1,13 +1,19 @@
 package person.mpatterson.animationtalk.ui;
 
-import android.graphics.drawable.Animatable;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.widget.ImageView;
+import android.animation.Animator;
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.graphics.drawable.Animatable2;
+import android.support.v4.content.ContextCompat;
+import android.widget.TextView;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Queue;
 
 import person.mpatterson.animationtalk.R;
 import person.mpatterson.animationtalk.helper.BaseActivity;
+import person.mpatterson.animationtalk.helper.Phase;
 import person.mpatterson.animationtalk.widget.BaseLayout;
 
 /**
@@ -21,17 +27,23 @@ public class QuestionsActivity extends BaseActivity {
     }
 
     @Override
-    protected Class getNextActivityClass() {
-        return null;
-    }
+    protected Queue<Phase> buildPhases() {
+        Queue<Phase> phases = new ArrayDeque<>();
 
-    private void startAnimation() {
-        ((BaseLayout) findViewById(R.id.base_layout)).startAnimation();
+        Animatable2 slideOut = ((BaseLayout) findViewById(R.id.base_layout)).getAnimatable();
+        phases.add(new Phase(slideOut, false, this));
+
+        TextView v = (TextView) findViewById(R.id.questions);
+        Animator textReveal = ObjectAnimator.ofObject(v, "textColor", new ArgbEvaluator(),
+                v.getCurrentTextColor(), ContextCompat.getColor(this, android.R.color.white));
+        textReveal.setDuration(3000);
+        phases.add(new Phase(textReveal, true, this));
+
+        return phases;
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        startAnimation();
-        return super.onKeyDown(keyCode, event);
+    protected Class getNextActivityClass() {
+        return null;
     }
 }
