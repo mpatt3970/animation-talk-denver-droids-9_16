@@ -26,6 +26,10 @@
         </activity>
 
         <activity
+            android:name=".ui.WhyActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>

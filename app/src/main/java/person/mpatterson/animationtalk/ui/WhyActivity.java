@@ -7,13 +7,12 @@ import person.mpatterson.animationtalk.helper.BaseActivity;
 import person.mpatterson.animationtalk.helper.Phase;
 
 /**
- * Created by michael on 9/5/16.
+ * Created by michael on 9/11/16.
  */
-public class IntroActivity extends BaseActivity {
-
+public class WhyActivity extends BaseActivity {
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_intro;
+        return R.layout.activity_why;
     }
 
     @Override
@@ -23,6 +22,6 @@ public class IntroActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return WhyActivity.class;
+        return QuestionsActivity.class;
     }
 }
