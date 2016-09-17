@@ -9,10 +9,10 @@ import person.mpatterson.animationtalk.helper.Phase;
 /**
  * Created by michael on 9/17/16.
  */
-public class MissingFrameActivity extends BaseActivity {
+public class PurposefulNaturalActivity extends BaseActivity {
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_missing_frame;
+        return R.layout.activity_purposeful_natural;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class MissingFrameActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return PurposefulNaturalActivity.class;
+        return QuestionsActivity.class;
     }
 }

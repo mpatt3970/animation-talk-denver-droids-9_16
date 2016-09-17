@@ -42,6 +42,10 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.PurposefulNaturalActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>
