@@ -16,7 +16,15 @@
             android:layout_gravity="center"
             android:textSize="20dp"
             android:textColor="@android:color/white"
-            android:text="android.R.integer.config_shortAnimTime == 200 ms"/>
+            android:text="200 ms"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_shortAnimTime"/>
 
         <View
             android:id="@+id/short_ball_anim"
@@ -24,7 +32,6 @@
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="left"
             android:background="@drawable/white_ball" />
 
         <TextView
@@ -33,7 +40,15 @@
             android:layout_gravity="center"
             android:textSize="20dp"
             android:textColor="@android:color/white"
-            android:text="android.R.integer.config_mediumAnimTime == 400 ms"/>
+            android:text="400 ms"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_mediumAnimTime"/>
 
         <View
             android:id="@+id/medium_ball_anim"
@@ -41,7 +56,6 @@
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="left"
             android:background="@drawable/white_ball" />
 
         <TextView
@@ -50,7 +64,16 @@
             android:layout_gravity="center"
             android:textSize="20dp"
             android:textColor="@android:color/white"
-            android:text="android.R.integer.config_longAnimTime == 500 ms"/>
+            android:text="500 ms"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_longAnimTime"/>
 
         <View
             android:id="@+id/long_ball_anim"
@@ -58,7 +81,6 @@
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="left"
             android:background="@drawable/white_ball" />
 
     </LinearLayout>

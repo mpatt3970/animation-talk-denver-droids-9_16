@@ -47,11 +47,27 @@ public class AndroidDurationsActivity extends BaseActivity {
         animatorLong.setDuration(res.getInteger(android.R.integer.config_longAnimTime));
         animatorLong.setInterpolator(interpolator);
 
+        Animator reverseAnimatorShort = ObjectAnimator.ofFloat(ballShort, View.TRANSLATION_X, width, 0);
+        reverseAnimatorShort.setDuration(res.getInteger(android.R.integer.config_shortAnimTime));
+        reverseAnimatorShort.setInterpolator(interpolator);
+
+        Animator reverseAnimatorMedium = ObjectAnimator.ofFloat(ballMedium, View.TRANSLATION_X, width, 0);
+        reverseAnimatorMedium.setDuration(res.getInteger(android.R.integer.config_mediumAnimTime));
+        reverseAnimatorMedium.setInterpolator(interpolator);
+
+        Animator reverseAnimatorLong = ObjectAnimator.ofFloat(ballLong, View.TRANSLATION_X, width, 0);
+        reverseAnimatorLong.setDuration(res.getInteger(android.R.integer.config_longAnimTime));
+        reverseAnimatorLong.setInterpolator(interpolator);
+
         List<Animator> animators = Arrays.asList(animatorShort, animatorMedium, animatorLong);
 
         Phase p = new Phase(animators, false, this);
         Queue<Phase> phaseQueue = new ArrayDeque<>();
         phaseQueue.add(p);
+        phaseQueue.add(new Phase(reverseAnimatorLong, false, this));
+        phaseQueue.add(new Phase(reverseAnimatorMedium, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorShort, true, this));
+
         return phaseQueue;
     }
 
