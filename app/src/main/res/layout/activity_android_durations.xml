@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_shortAnimTime == 200 ms"/>
+
+        <View
+            android:id="@+id/short_ball_anim"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left"
+            android:background="@drawable/white_ball" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_mediumAnimTime == 400 ms"/>
+
+        <View
+            android:id="@+id/medium_ball_anim"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left"
+            android:background="@drawable/white_ball" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="android.R.integer.config_longAnimTime == 500 ms"/>
+
+        <View
+            android:id="@+id/long_ball_anim"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left"
+            android:background="@drawable/white_ball" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>

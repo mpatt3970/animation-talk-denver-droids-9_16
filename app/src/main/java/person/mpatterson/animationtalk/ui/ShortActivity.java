@@ -9,11 +9,10 @@ import person.mpatterson.animationtalk.helper.Phase;
 /**
  * Created by michael on 9/17/16.
  */
-public class PurposefulNaturalActivity extends BaseActivity {
+public class ShortActivity extends BaseActivity {
     @Override
     protected int getLayoutResourceId() {
-        // TODO: include why you shouldn't animate everything
-        return R.layout.activity_purposeful_natural;
+        return R.layout.activity_short;
     }
 
     @Override
@@ -23,6 +22,6 @@ public class PurposefulNaturalActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return AllTheThingsActivity.class;
+        return AndroidDurationsActivity.class;
     }
 }

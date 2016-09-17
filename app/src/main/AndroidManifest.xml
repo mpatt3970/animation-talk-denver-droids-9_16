@@ -46,6 +46,22 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.AllTheThingsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.ShortActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.AndroidDurationsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.DurationDependsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>

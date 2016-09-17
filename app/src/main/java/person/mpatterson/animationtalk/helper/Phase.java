@@ -4,6 +4,8 @@ import android.animation.Animator;
 import android.graphics.drawable.Animatable2;
 import android.graphics.drawable.Drawable;
 
+import java.util.List;
+
 /**
  * Created by michael on 9/5/16.
  */
@@ -15,6 +17,7 @@ public class Phase {
 
     private boolean autoplay;
     private Animator animator;
+    private List<Animator> animatorList;
     private Animatable2 animatable;
     private PhaseListener listener;
 
@@ -23,6 +26,23 @@ public class Phase {
         this.autoplay = autoplay;
         this.listener = listener;
         this.animator.addListener(mAnimatorListener);
+    }
+
+    public Phase(List<Animator> animatorList, boolean autoplay, PhaseListener listener) {
+        this.animatorList = animatorList;
+        this.autoplay = autoplay;
+        this.listener = listener;
+        Animator longestAnim = null;
+        for (Animator animator : animatorList) {
+            if (longestAnim == null) {
+                longestAnim = animator;
+            } else if (longestAnim.getDuration() < animator.getDuration()) {
+                longestAnim = animator;
+            }
+        }
+        if (longestAnim != null) {
+            longestAnim.addListener(mAnimatorListener);
+        }
     }
 
     public Phase(Animatable2 animatable, boolean autoplay, PhaseListener listener) {
@@ -35,6 +55,11 @@ public class Phase {
     public void start() {
         if (animator != null) {
             animator.start();
+        }
+        if (animatorList != null) {
+            for (Animator animator : animatorList) {
+                animator.start();
+            }
         }
         if (animatable != null) {
             animatable.start();
