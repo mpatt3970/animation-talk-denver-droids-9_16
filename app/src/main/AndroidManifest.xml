@@ -62,6 +62,10 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.DebuggingTipActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>

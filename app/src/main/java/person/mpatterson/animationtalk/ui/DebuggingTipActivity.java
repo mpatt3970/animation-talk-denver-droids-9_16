@@ -9,10 +9,10 @@ import person.mpatterson.animationtalk.helper.Phase;
 /**
  * Created by michael on 9/17/16.
  */
-public class DurationDependsActivity extends BaseActivity {
+public class DebuggingTipActivity extends BaseActivity {
     @Override
     protected int getLayoutResourceId() {
-        return R.layout.activity_duration_depends;
+        return R.layout.activity_debugging_tip;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class DurationDependsActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return DebuggingTipActivity.class;
+        return QuestionsActivity.class;
     }
 }
