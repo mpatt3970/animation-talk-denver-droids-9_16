@@ -42,7 +42,6 @@ public class AndroidDurationsActivity extends BaseActivity {
         animatorMedium.setDuration(res.getInteger(android.R.integer.config_mediumAnimTime));
         animatorMedium.setInterpolator(interpolator);
 
-
         Animator animatorLong = ObjectAnimator.ofFloat(ballLong, View.TRANSLATION_X, 0, width);
         animatorLong.setDuration(res.getInteger(android.R.integer.config_longAnimTime));
         animatorLong.setInterpolator(interpolator);
