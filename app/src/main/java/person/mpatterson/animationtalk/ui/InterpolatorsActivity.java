@@ -46,14 +46,12 @@ public class InterpolatorsActivity extends BaseActivity {
         Interpolator decelerateInterpolator = new DecelerateInterpolator();
         Interpolator bounceInterpolator = new BounceInterpolator();
 
-        //TODO Interpolators
         Animator animatorLinear = getForwardAnimator(ballLinear, linearInterpolator);
         Animator animatorAccelerate = getForwardAnimator(ballAccel, accelerateInterpolator);
         Animator animatorAccelerateDecelerate = getForwardAnimator(ballAccelDecel, accelerateDecelerateInterpolator);
         Animator animatorDecelerate = getForwardAnimator(ballDecel, decelerateInterpolator);
         Animator animatorBounce = getForwardAnimator(ballBounce, bounceInterpolator);
 
-        //TODO Setup Reversal Interpolators
         Animator reverseAnimatorLinear = getReverseAnimator(ballLinear, linearInterpolator);
         Animator reverseAnimatorAccelerate = getReverseAnimator(ballAccel, accelerateInterpolator);
         Animator reverseAnimatorAccelerateDecelerate = getReverseAnimator(ballAccelDecel, accelerateDecelerateInterpolator);
