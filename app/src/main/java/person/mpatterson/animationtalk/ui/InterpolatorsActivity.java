@@ -93,6 +93,6 @@ public class InterpolatorsActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return QuestionsActivity.class;
+        return CircularRevealActivity.class;
     }
 }

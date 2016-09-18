@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="200dp">
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circular Reveal"/>
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Radius is often calculated incorrectly because it's the \nhypotenuse of width and height instead of just height." />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="Correct Radius" />
+
+        <View
+            android:id="@+id/correct_reveal"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_ball" />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="Incorrect Radius" />
+
+        <View
+            android:id="@+id/incorrect_reveal"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_ball" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>
