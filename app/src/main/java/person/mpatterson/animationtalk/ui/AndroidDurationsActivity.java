@@ -34,6 +34,7 @@ public class AndroidDurationsActivity extends BaseActivity {
         Resources res = getResources();
         float width = 600 * res.getDisplayMetrics().density - res.getDimensionPixelOffset(R.dimen.white_ball_size);
         Interpolator interpolator = new LinearInterpolator();
+
         Animator animatorShort = ObjectAnimator.ofFloat(ballShort, View.TRANSLATION_X, 0, width);
         animatorShort.setDuration(res.getInteger(android.R.integer.config_shortAnimTime));
         animatorShort.setInterpolator(interpolator);
