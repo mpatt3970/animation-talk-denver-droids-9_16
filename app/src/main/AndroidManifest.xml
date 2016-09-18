@@ -66,6 +66,10 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.InterpolatorsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>
