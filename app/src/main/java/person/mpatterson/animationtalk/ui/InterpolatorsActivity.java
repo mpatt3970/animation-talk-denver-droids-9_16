@@ -1,8 +1,8 @@
 package person.mpatterson.animationtalk.ui;
 
 import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
@@ -20,19 +20,9 @@ import person.mpatterson.animationtalk.R;
 import person.mpatterson.animationtalk.helper.BaseActivity;
 import person.mpatterson.animationtalk.helper.Phase;
 
-import static android.animation.ObjectAnimator.ofFloat;
-
 public class InterpolatorsActivity extends BaseActivity {
 
     private float width;
-    private int animationDuration = 1000;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Resources res = getResources();
-        float width = 600 * res.getDisplayMetrics().density - res.getDimensionPixelOffset(R.dimen.white_ball_size);
-    }
 
     @Override
     protected int getLayoutResourceId() {
@@ -41,6 +31,9 @@ public class InterpolatorsActivity extends BaseActivity {
 
     @Override
     protected Queue<Phase> buildPhases() {
+        Resources res = getResources();
+        width = 600 * res.getDisplayMetrics().density - res.getDimensionPixelOffset(R.dimen.white_ball_size);
+
         View ballLinear = findViewById(R.id.linear_ball_anim);
         View ballAccel = findViewById(R.id.accell_ball_anim);
         View ballAccelDecel = findViewById(R.id.accell_decel_ball_anim);
@@ -67,16 +60,20 @@ public class InterpolatorsActivity extends BaseActivity {
         Animator reverseAnimatorDecelerate = getReverseAnimator(ballDecel, decelerateInterpolator);
         Animator reverseAnimatorBounce = getReverseAnimator(ballBounce, bounceInterpolator);
 
-        List<Animator> animators = Arrays.asList(animatorLinear, animatorAccelerate, animatorAccelerateDecelerate, animatorDecelerate, animatorBounce);
+        List<Animator> animators = Arrays.asList(animatorLinear,
+                animatorAccelerate,
+                animatorAccelerateDecelerate,
+                animatorDecelerate,
+                animatorBounce);
 
         Phase p = new Phase(animators, false, this);
         Queue<Phase> phaseQueue = new ArrayDeque<>();
         phaseQueue.add(p);
-        phaseQueue.add(new Phase(reverseAnimatorLinear, false, this));
-        phaseQueue.add(new Phase(reverseAnimatorAccelerate, true, this));
-        phaseQueue.add(new Phase(reverseAnimatorAccelerateDecelerate, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorBounce, false, this));
         phaseQueue.add(new Phase(reverseAnimatorDecelerate, true, this));
-        phaseQueue.add(new Phase(reverseAnimatorBounce, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorAccelerateDecelerate, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorAccelerate, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorLinear, true, this));
 
         return phaseQueue;
     }
@@ -90,8 +87,8 @@ public class InterpolatorsActivity extends BaseActivity {
     }
 
     private Animator getAnimator(View ball, Interpolator interpolator, float start, float end) {
-        Animator animator = ofFloat(ball, View.TRANSLATION_X, start, end);
-        animator.setDuration(animationDuration);
+        Animator animator = ObjectAnimator.ofFloat(ball, View.TRANSLATION_X, start, end);
+        animator.setDuration(1000);
         animator.setInterpolator(interpolator);
         return animator;
     }
