@@ -14,9 +14,10 @@ import person.mpatterson.animationtalk.helper.Phase;
 
 public class CircularRevealActivity extends BaseActivity {
 
-    private boolean pause;
     private boolean exit;
     private boolean firstAnimComplete;
+    Display display;
+    Point size;
 
     @Override
     protected int getLayoutResourceId() {
@@ -25,6 +26,9 @@ public class CircularRevealActivity extends BaseActivity {
 
     @Override
     protected Queue<Phase> buildPhases() {
+        display = getWindowManager().getDefaultDisplay();
+        size = new Point();
+        display.getSize(size);
         return null;
     }
 
@@ -32,38 +36,30 @@ public class CircularRevealActivity extends BaseActivity {
     protected Class getNextActivityClass() {
         if (exit) {
             return QuestionsActivity.class;
-        } else if (pause) {
-            exit = true;
         } else {
             if (!firstAnimComplete) {
                 View correctReveal = findViewById(R.id.correct_reveal);
 
-                Display display = getWindowManager().getDefaultDisplay();
-                Point size = new Point();
-                display.getSize(size);
-
                 int correctX = size.x / 2;
                 int correctY = size.y / 2;
+                int viewX = correctReveal.getWidth() / 2;
+                int viewY = correctReveal.getHeight() / 2;
                 float correctRadius = (float) Math.hypot(correctX, correctY);
 
-                Animator correctAnimator = ViewAnimationUtils.createCircularReveal(correctReveal, correctX, correctY, 0, correctRadius);
+                Animator correctAnimator = ViewAnimationUtils.createCircularReveal(correctReveal, viewX, viewY, 0, correctRadius);
                 correctReveal.setVisibility(View.VISIBLE);
                 correctAnimator.start();
                 firstAnimComplete = true;
             } else {
-                pause = true;
+                exit = true;
 
                 View incorrectReveal = findViewById(R.id.incorrect_reveal);
 
-                Display display = getWindowManager().getDefaultDisplay();
-                Point size = new Point();
-                display.getSize(size);
-
-                int incorrectX = size.x / 2;
-                int incorrectY = size.y / 2;
-
+                int viewX = incorrectReveal.getWidth() / 2;
+                int viewY = incorrectReveal.getHeight() / 2;
                 float incorrectRadius = size.x / 2;
-                Animator incorrectAnimator = ViewAnimationUtils.createCircularReveal(incorrectReveal, incorrectX, incorrectY, 0, incorrectRadius);
+
+                Animator incorrectAnimator = ViewAnimationUtils.createCircularReveal(incorrectReveal, viewX, viewY, 0, incorrectRadius);
                 incorrectReveal.setVisibility(View.VISIBLE);
                 incorrectAnimator.start();
             }
