@@ -40,7 +40,7 @@ public class ViewPropertyBugActivity extends BaseActivity {
     @Override
     protected Class getNextActivityClass() {
         if (exit) {
-            return CircularRevealActivity.class;
+            return CustomPropertyActivity.class;
         } else if (pause) {
             exit = true;
             animatedView.animate().setListener(null);

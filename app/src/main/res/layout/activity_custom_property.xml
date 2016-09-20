@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Custom Properties" />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="200dp"
+            android:text="public static final Property&lt;TextView, Integer&gt; STRING_LENGTH =
+            \n    new Property&lt;TextView, Integer&gt;(Integer.class, name) {
+            \n        @Override
+            \n        public Integer get(TextView textView) {
+            \n            return textView.getText().length();
+            \n        }
+            \n        @Override
+            \n        public void set(TextView object, Integer value) {
+            \n            object.setText(HEADER_TEXT.substring(0, value));
+            \n        }
+            \n    };
+            \n\n// Use like View.ALPHA or View.SCALE_X
+            \nObjectAnimator.ofInt(view, STRING_LENGTH, 0, HEADER_TEXT.length());"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>
