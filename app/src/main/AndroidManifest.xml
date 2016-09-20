@@ -70,6 +70,14 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.BadArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.GoodArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.CircularRevealActivity"
             android:screenOrientation="landscape" />
 
