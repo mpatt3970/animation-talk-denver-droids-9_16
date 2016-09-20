@@ -22,6 +22,6 @@ public class DebuggingTipActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return QuestionsActivity.class;
+        return InterpolatorsActivity.class;
     }
 }

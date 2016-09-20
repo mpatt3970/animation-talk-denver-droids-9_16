@@ -6,8 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="200dp">
 
@@ -15,17 +14,17 @@
             style="@style/HeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Durations"/>
+            android:text="Interpolators"/>
 
         <TextView
             style="@style/SmallerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="android.R.integer.config_shortAnimTime (200 ms)" />
+            android:layout_marginTop="15dp"
+            android:text="Linear Interpolator" />
 
         <View
-            android:id="@+id/short_ball_anim"
+            android:id="@+id/linear_ball_anim"
             android:layout_width="@dimen/white_ball_size"
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginBottom="10dp"
@@ -36,11 +35,11 @@
             style="@style/SmallerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="android.R.integer.config_mediumAnimTime (400 ms)" />
+            android:layout_marginTop="10dp"
+            android:text="Accelerate Interpolator" />
 
         <View
-            android:id="@+id/medium_ball_anim"
+            android:id="@+id/accell_ball_anim"
             android:layout_width="@dimen/white_ball_size"
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginBottom="10dp"
@@ -51,11 +50,41 @@
             style="@style/SmallerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="500 ms - android.R.integer.config_longAnimTime" />
+            android:layout_marginTop="10dp"
+            android:text="Accelerate Decelerate Interpolator" />
 
         <View
-            android:id="@+id/long_ball_anim"
+            android:id="@+id/accell_decel_ball_anim"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_ball" />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Decelerate Interpolator" />
+
+        <View
+            android:id="@+id/decel_ball_anim"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_ball" />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bounce Interpolator" />
+
+        <View
+            android:id="@+id/bounce_ball_anim"
             android:layout_width="@dimen/white_ball_size"
             android:layout_height="@dimen/white_ball_size"
             android:layout_marginBottom="10dp"

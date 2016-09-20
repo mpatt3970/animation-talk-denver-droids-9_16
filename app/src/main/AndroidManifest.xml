@@ -66,6 +66,30 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ui.InterpolatorsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.BadArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.GoodArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.ViewPropertyBugActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.CustomPropertyActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.CircularRevealActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".ui.QuestionsActivity"
             android:screenOrientation="landscape" />
     </application>

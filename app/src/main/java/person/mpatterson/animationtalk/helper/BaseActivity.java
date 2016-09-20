@@ -19,7 +19,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-import java.util.List;
 import java.util.Queue;
 
 public abstract class BaseActivity extends Activity implements Phase.PhaseListener {

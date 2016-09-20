@@ -5,12 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40dp"
-        android:textColor="@android:color/white"
-        android:text="INTRO" />
+        android:orientation="vertical"
+        android:paddingLeft="200dp">
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Animate All the Things" />
+
+        <TextView
+            style="@style/CenteredSubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="(except don't)" />
+
+    </LinearLayout>
 
 </person.mpatterson.animationtalk.widget.BaseLayout>

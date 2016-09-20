@@ -7,43 +7,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
-            android:textColor="@android:color/white"
-            android:text="Purposeful + Natural"
-            android:layout_gravity="center" />
+        android:orientation="vertical"
+        android:paddingLeft="200dp">
 
         <TextView
+            style="@style/HeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/white"
-            android:text="provide some context"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:text="Purposeful + Natural" />
 
         <TextView
+            style="@style/SubHeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/white"
-            android:text="visually direct attention to where it's needed"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:text="provide some context" />
 
         <TextView
+            style="@style/SubHeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/white"
-            android:text="the necessary animation NOT the animation to show your skills"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:text="visually direct attention to where it's needed" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="the necessary animation NOT the animation to show your skills" />
 
     </LinearLayout>
 

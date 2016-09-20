@@ -7,56 +7,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
+            style="@style/HeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:textColor="@android:color/white"
-            android:text="For Debugging"/>
+            android:text="For Debugging" />
 
         <TextView
+            style="@style/SmallerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/white"
-            android:text="sometimes the duration is too fast to really watch closely"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/white"
-            android:text="so inside Developer Options"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="sometimes the duration is too fast to really watch closely \n so inside Developer Options" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:layout_marginTop="5dp" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/inside_dev_options"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inside_dev_options" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/animation_duration_settings"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/animation_duration_settings" />
 
         </LinearLayout>
 

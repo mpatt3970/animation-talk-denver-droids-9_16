@@ -10,6 +10,7 @@ import person.mpatterson.animationtalk.helper.Phase;
  * Created by michael on 9/17/16.
  */
 public class MissingFrameActivity extends BaseActivity {
+    // TODO make a custom janky animation
     @Override
     protected int getLayoutResourceId() {
         return R.layout.activity_missing_frame;
