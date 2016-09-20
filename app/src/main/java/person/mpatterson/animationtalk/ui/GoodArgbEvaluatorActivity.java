@@ -49,7 +49,7 @@ public class GoodArgbEvaluatorActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return CircularRevealActivity.class;
+        return ViewPropertyBugActivity.class;
     }
 
     public static final Property<TextView, Integer> TEXT_COLOR =
