@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="984dp"
+    android:width="1920dp"
+    android:viewportHeight="984"
+    android:viewportWidth="1920">
+
+    <path android:fillColor="@color/background_color"
+        android:pathData="M0,0
+                        l0,984
+                        l1920,0
+                        l0,-984"/>
+
+    <group android:name="blue_triangle">
+
+        <path android:fillColor="#59a"
+            android:strokeColor="@color/background_color"
+            android:strokeWidth="3"
+            android:pathData="M0,-100
+                        l0,300
+                        l300,-225
+                        l-300,-400" />
+
+    </group>
+
+    <group android:name="green_triangle">
+
+        <path android:fillColor="#292"
+            android:strokeColor="@color/background_color"
+            android:strokeWidth="3"
+            android:pathData="M0,222
+                        l0,300
+                        l300,-225
+                        l-300,-400" />
+
+    </group>
+
+    <group android:name="orange_triangle">
+
+        <path android:fillColor="#f51"
+            android:strokeColor="@color/background_color"
+            android:strokeWidth="3"
+            android:pathData="M0,625
+                        l0,360
+                        l360,-270
+                        l-360,-480" />
+
+    </group>
+
+    <group android:name="yellow_triangle">
+
+        <path android:fillColor="#ec1"
+            android:strokeColor="@color/background_color"
+            android:strokeWidth="3"
+            android:pathData="M0,400
+                        l0,240
+                        l240,-180
+                        l-240,-320" />
+
+    </group>
+
+    <group android:name="red_triangle">
+
+        <path android:fillColor="#d44"
+            android:strokeColor="@color/background_color"
+            android:strokeWidth="3"
+            android:pathData="M0,800
+                        l0,300
+                        l300,-225
+                        l-300,-400" />
+
+    </group>
+
+</vector>

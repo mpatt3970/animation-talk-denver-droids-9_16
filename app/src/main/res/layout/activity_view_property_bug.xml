@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="240dp"
+            android:text=" animatedView.animate()
+            \n      .scaleXBy(1.5f)
+            \n      .scaleYBy(1.5f)
+            \n      .setListener(animatorListener);" />
+
+        <TextView
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="240dp"
+            android:text=" @Override
+            \n public void onAnimationEnd(Animator animator) {
+            \n      animatedView.animate()
+            \n            .scaleXBy(-1.5f)
+            \n            .scaleYBy(-1.5f);
+            \n }"/>
+
+        <TextView
+            android:id="@+id/reveal_code"
+            style="@style/SmallerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="240dp"
+            android:text=" // from android.view.View
+            \n public ViewPropertyAnimator animate() {
+            \n      if (mAnimator == null) {
+            \n          mAnimator = new ViewPropertyAnimator(this);
+            \n      }
+            \n      return mAnimator;
+            \n }"
+            android:alpha="0"/>
+
+        <View
+            android:id="@+id/animated_view"
+            android:layout_width="@dimen/white_ball_size"
+            android:layout_height="@dimen/white_ball_size"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/white_ball"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>

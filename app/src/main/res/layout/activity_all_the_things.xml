@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/animate_word"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animate" />
+
+            <TextView
+                android:id="@+id/all_word"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="All" />
+
+            <TextView
+                android:id="@+id/the_word"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="THE" />
+
+            <TextView
+                android:id="@+id/things_word"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="Things" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/left_statement"
+                style="@style/SmallerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="if animations are good." />
+
+            <TextView
+                android:id="@+id/right_statement"
+                style="@style/SmallerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="more animations are better" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/animate_all_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/animate_all_the_things" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>

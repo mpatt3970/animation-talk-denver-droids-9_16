@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_header">60sp</dimen>
+
+    <dimen name="white_ball_size">40dp</dimen>
+    <dimen name="large_white_ball_size">140dp</dimen>
+</resources>

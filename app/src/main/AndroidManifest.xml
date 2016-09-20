@@ -2,23 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="person.mpatterson.animationtalk">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
         android:name="android.software.leanback"
-        android:required="true" />
+        android:required="false" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
         <activity
-            android:name=".BaseActivity"
+            android:name=".ui.IntroActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +24,74 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.WhyActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.PrinciplesActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.SmoothActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.MissingFrameActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.PurposefulNaturalActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.AllTheThingsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.ShortActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.AndroidDurationsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.DurationDependsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.DebuggingTipActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.InterpolatorsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.BadArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.GoodArgbEvaluatorActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.ViewPropertyBugActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.CustomPropertyActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.CircularRevealActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.QuestionsActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

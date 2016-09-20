@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingLeft="200dp">
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why Animate?" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Polished" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Professional" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Provide Context" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Positive User Experiences" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>
