@@ -3,23 +3,7 @@
     android:drawable="@drawable/base_background" >
 
     <target
-        android:animation="@animator/slide_out_blue"
-        android:name="blue_triangle" />
-
-    <target
-        android:animation="@animator/slide_out_orange"
-        android:name="orange_triangle" />
-
-    <target
-        android:animation="@animator/slide_out_green"
-        android:name="green_triangle" />
-
-    <target
-        android:animation="@animator/slide_out_red"
-        android:name="red_triangle" />
-
-    <target
-        android:animation="@animator/slide_out_yellow"
-        android:name="yellow_triangle" />
+        android:animation="@animator/slide_out"
+        android:name="triangles" />
 
 </animated-vector>
