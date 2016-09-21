@@ -41,6 +41,30 @@
         android:layout_marginTop="300dp"
         android:text="SCALE_X" />
 
+    <LinearLayout
+        android:id="@+id/scale_x_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="425dp"
+        android:layout_marginTop="300dp"
+        android:scaleX="0"
+        android:scaleY="0">
+
+        <TextView
+            style="@style/CenteredSubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCALE_X" />
+
+        <TextView
+            style="@style/CenteredSubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCALE_Y" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/scale_y"
         style="@style/CenteredSubHeaderText"

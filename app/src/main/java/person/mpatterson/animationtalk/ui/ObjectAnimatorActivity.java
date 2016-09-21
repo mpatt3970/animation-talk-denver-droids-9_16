@@ -1,6 +1,7 @@
 package person.mpatterson.animationtalk.ui;
 
 import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.view.View;
 
@@ -26,6 +27,7 @@ public class ObjectAnimatorActivity extends BaseActivity {
         View transY = findViewById(R.id.trans_y);
         View scaleX = findViewById(R.id.scale_x);
         View scaleY = findViewById(R.id.scale_y);
+        View scaleXY = findViewById(R.id.scale_x_y);
         View alpha = findViewById(R.id.alpha);
         View evaluator = findViewById(R.id.evaluator);
         Queue<Phase> phases = new ArrayDeque<>();
@@ -45,6 +47,20 @@ public class ObjectAnimatorActivity extends BaseActivity {
         Animator scaleYAnim = ObjectAnimator.ofFloat(scaleY, View.SCALE_Y, 1, 0);
         scaleYAnim.setDuration(1000);
         phases.add(new Phase(scaleYAnim, false, this));
+
+        Animator scaleXXAnim = ObjectAnimator.ofFloat(scaleXY, View.SCALE_X, 0, 1);
+        Animator scaleYYAnim = ObjectAnimator.ofFloat(scaleXY, View.SCALE_Y, 0, 1);
+        AnimatorSet set = new AnimatorSet();
+        set.setDuration(1000);
+        set.playTogether(scaleXXAnim, scaleYYAnim);
+        phases.add(new Phase(set, false, this));
+
+        Animator reverseScaleXXAnim = ObjectAnimator.ofFloat(scaleXY, View.SCALE_X, 1, 0);
+        Animator reverseScaleYYAnim = ObjectAnimator.ofFloat(scaleXY, View.SCALE_Y, 1, 0);
+        AnimatorSet reverseSet = new AnimatorSet();
+        reverseSet.setDuration(1000);
+        reverseSet.playTogether(reverseScaleXXAnim, reverseScaleYYAnim);
+        phases.add(new Phase(reverseSet, false, this));
 
         Animator alphaAnim = ObjectAnimator.ofFloat(alpha, View.ALPHA, 1, 0);
         alphaAnim.setDuration(1000);
