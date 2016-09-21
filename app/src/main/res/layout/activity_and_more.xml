@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingLeft="200dp">
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="And More!"/>
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transitions - now in Support Library"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SharedElements"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circular Reveal"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AnimationDrawable"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueAnimators"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PropertyAnimators"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>
