@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/SmallerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="35dp"
+        android:text="ObjectAnimator.ofFloat(View, Property, fromValue, toValue);" />
+
+    <TextView
+        android:id="@+id/trans_x"
+        style="@style/CenteredSubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="150dp"
+        android:text="TRANSLATION_X" />
+
+    <TextView
+        android:id="@+id/trans_y"
+        style="@style/CenteredSubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="600dp"
+        android:layout_marginTop="150dp"
+        android:text="TRANSLATION_Y" />
+
+    <TextView
+        android:id="@+id/scale_x"
+        style="@style/CenteredSubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="300dp"
+        android:text="SCALE_X" />
+
+    <TextView
+        android:id="@+id/scale_y"
+        style="@style/CenteredSubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="600dp"
+        android:layout_marginTop="300dp"
+        android:text="SCALE_Y" />
+
+    <TextView
+        android:id="@+id/alpha"
+        style="@style/CenteredSubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="400dp"
+        android:text="ALPHA" />
+
+    <TextView
+        android:id="@+id/evaluator"
+        style="@style/SmallerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="460dp"
+        android:layout_marginLeft="35dp"
+        android:alpha="0"
+        android:text="ObjectAnimator.ofObject(View, Property, Evaluator, fromValue, toValue);" />
+
+</person.mpatterson.animationtalk.widget.BaseLayout>

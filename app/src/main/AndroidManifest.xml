@@ -69,6 +69,9 @@
             android:name=".ui.InterpolatorsActivity"
             android:screenOrientation="landscape" />
 
+        <activity android:name=".ui.ObjectAnimatorActivity"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".ui.BadArgbEvaluatorActivity"
             android:screenOrientation="landscape" />

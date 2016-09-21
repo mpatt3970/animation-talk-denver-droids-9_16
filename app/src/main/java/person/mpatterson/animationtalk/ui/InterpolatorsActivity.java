@@ -93,6 +93,6 @@ public class InterpolatorsActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return BadArgbEvaluatorActivity.class;
+        return ObjectAnimatorActivity.class;
     }
 }
