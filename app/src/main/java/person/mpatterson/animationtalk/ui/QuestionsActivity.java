@@ -8,7 +8,6 @@ import android.support.v4.content.ContextCompat;
 import android.widget.TextView;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Queue;
 
 import person.mpatterson.animationtalk.R;
@@ -44,6 +43,6 @@ public class QuestionsActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return null;
+        return IntroActivity.class;
     }
 }

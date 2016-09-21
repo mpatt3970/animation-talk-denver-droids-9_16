@@ -37,14 +37,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Provide Context" />
+            android:text="Context" />
 
         <TextView
             style="@style/SubHeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Positive User Experiences" />
+            android:text="User Experiences" />
 
     </LinearLayout>
 

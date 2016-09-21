@@ -68,10 +68,10 @@ public class InterpolatorsActivity extends BaseActivity {
         Queue<Phase> phaseQueue = new ArrayDeque<>();
         phaseQueue.add(p);
         phaseQueue.add(new Phase(reverseAnimatorBounce, false, this));
-        phaseQueue.add(new Phase(reverseAnimatorDecelerate, true, this));
-        phaseQueue.add(new Phase(reverseAnimatorAccelerateDecelerate, true, this));
-        phaseQueue.add(new Phase(reverseAnimatorAccelerate, true, this));
-        phaseQueue.add(new Phase(reverseAnimatorLinear, true, this));
+        phaseQueue.add(new Phase(reverseAnimatorDecelerate, false, this));
+        phaseQueue.add(new Phase(reverseAnimatorAccelerateDecelerate, false, this));
+        phaseQueue.add(new Phase(reverseAnimatorAccelerate, false, this));
+        phaseQueue.add(new Phase(reverseAnimatorLinear, false, this));
 
         return phaseQueue;
     }
