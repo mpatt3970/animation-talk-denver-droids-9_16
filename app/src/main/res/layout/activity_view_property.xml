@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.mpatterson.animationtalk.widget.BaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingLeft="200dp">
+
+        <TextView
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewPropertyAnimator"/>
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="concise"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="starts immediately"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="more performant for several at once"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/SubHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view.animate( )
+            \n    .alpha(0f)
+            \n    .scaleX(1.5f)
+            \n    .setDuration(500);"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</person.mpatterson.animationtalk.widget.BaseLayout>
