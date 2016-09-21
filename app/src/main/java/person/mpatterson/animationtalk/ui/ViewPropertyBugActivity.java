@@ -18,6 +18,8 @@ import person.mpatterson.animationtalk.helper.Phase;
 public class ViewPropertyBugActivity extends BaseActivity {
 
     private View animatedView;
+    private View fixView;
+    private boolean fix;
     private boolean pause;
     private boolean exit;
 
@@ -29,6 +31,7 @@ public class ViewPropertyBugActivity extends BaseActivity {
     @Override
     protected Queue<Phase> buildPhases() {
         animatedView = findViewById(R.id.animated_view);
+        fixView = findViewById(R.id.fix_code);
         View reveal = findViewById(R.id.reveal_code);
         Queue<Phase> phases = new ArrayDeque<>();
         Animator animator = ObjectAnimator.ofFloat(reveal, View.ALPHA, 0f, 1f);
@@ -41,8 +44,11 @@ public class ViewPropertyBugActivity extends BaseActivity {
     protected Class getNextActivityClass() {
         if (exit) {
             return AndMoreActivity.class;
-        } else if (pause) {
+        } else if (fix) {
             exit = true;
+            fixView.animate().alpha(1);
+        } else if (pause) {
+            fix = true;
             animatedView.animate().setListener(null);
         } else {
             pause = true;
