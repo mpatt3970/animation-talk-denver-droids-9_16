@@ -45,7 +45,7 @@ public class CustomPropertyActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return CircularRevealActivity.class;
+        return QuestionsActivity.class;
     }
 
     public static final Property<TextView, Integer> STRING_LENGTH =
