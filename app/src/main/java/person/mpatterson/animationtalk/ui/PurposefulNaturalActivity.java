@@ -23,6 +23,6 @@ public class PurposefulNaturalActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return AllTheThingsActivity.class;
+        return ShortActivity.class;
     }
 }

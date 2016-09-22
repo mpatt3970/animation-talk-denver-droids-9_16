@@ -23,6 +23,6 @@ public class MissingFrameActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return PurposefulNaturalActivity.class;
+        return AllTheThingsActivity.class;
     }
 }

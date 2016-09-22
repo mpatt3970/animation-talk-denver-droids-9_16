@@ -56,6 +56,6 @@ public class AllTheThingsActivity extends BaseActivity {
 
     @Override
     protected Class getNextActivityClass() {
-        return ShortActivity.class;
+        return PurposefulNaturalActivity.class;
     }
 }
